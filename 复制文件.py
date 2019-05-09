@@ -14,3 +14,7 @@ if not os.path.exists(path) or not os.path.exists(rest):
 files = []
 files = os.listdir(path)
 random.shuffle(files)
+
+for i in range(10000):
+    s = os.path.join(path, files[i])
+    shutil.copy(s, rest)
